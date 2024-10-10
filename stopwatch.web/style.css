@@ -1,0 +1,156 @@
+
+body {
+    background-image: url(assets/stopwatch.bg.jpg);
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fffdfd;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-inline-size: 350px;
+    margin: 100px auto;
+    background-color: antiquewhite;
+    padding: 20px;
+    box-shadow: 0 20px 40px #620000;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.heading {
+    font-size: 3rem;
+    margin-block-end: 20px;
+    color: #620000;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease;
+}
+
+.stopwatch {
+    font-size: 3rem;
+    margin-block-end: 30px;    
+    padding: 20px;
+    background-color: #620000;
+    color: black;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.stopwatch:hover {
+    background-color: #620000;
+}
+
+.buttons {
+    margin-block-end: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin: 5px;
+    border: none;
+    background-color: #555;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #620000;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-btn:before {
+    content: "";
+    position: absolute;
+    inline-size: 300%;
+    block-size: 300%;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s, height 0.3s;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.animated-btn:hover:before {
+    inline-size: 0;
+    block-size: 0;
+}
+
+.animated-btn:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 2;
+}
+
+button:hover .animated-btn:after {
+    opacity: 0;
+}
+
+.lap-heading {
+    font-size: 1.5rem;
+    margin-block-start: 30px;
+    color: #620000;
+    animation: fadeInDown 1s ease;
+}
+
+.lap-times {
+    text-align: start;
+}
+
+.lap-times ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lap-times ul li {
+    background-color: #620000;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

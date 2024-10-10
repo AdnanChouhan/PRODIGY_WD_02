@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_sw/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_sw/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_sw/favicon-16x16.png">
+    <link rel="manifest" href="favicon_sw/site.webmanifest">
+
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+
+    <div class="container">
+        <h1 class="heading">Stopwatch</h1>
+        <div class="stopwatch">
+            <div id="time">00:00:00</div>
+        </div>
+        <div class="buttons">
+            <button id="startPauseBtn" class="animated-btn">Start</button>
+            <button id="resetBtn" class="animated-btn">Reset</button>
+            <button id="lapBtn" class="animated-btn">Lap</button>
+        </div>
+        <div class="lap-times">
+            <h2 class="lap-heading">Lap Times:</h2>
+            <ul id="lapList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
